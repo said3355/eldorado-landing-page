@@ -3,26 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Dorado Treasure Unlock</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>El Dorado Landing Page</title>
+    <style>
+        body {
+            background-color: #f5d542;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #ffd700;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .content-lock {
+            display: none;
+            margin: 20px;
+        }
+        .unlock-button {
+            padding: 10px 20px;
+            background-color: #6b8e23;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to the El Dorado Treasure Unlock</h1>
+        <h1>Welcome to El Dorado!</h1>
     </header>
-    <main>
-        <section>
-            <h2>Unlock the Secrets of El Dorado</h2>
-            <p>Discover the hidden treasures of El Dorado by following the clues and solving the mysteries!</p>
-            <button onclick="startUnlocking()">Start Unlocking</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 El Dorado Adventure</p>
-    </footer>
+    <div class="main">
+        <h2>Unlock Exclusive Content!</h2>
+        <p>To access our premium content, please click the button below:</p>
+        <button class="unlock-button" onclick="unlockContent()">Unlock Content</button>
+        <div class="content-lock" id="contentLock">
+            <h3>Congratulations!</h3>
+            <p>You have unlocked the exclusive content. Enjoy your stay!</p>
+        </div>
+    </div>
     <script>
-        function startUnlocking() {
-            alert('Get ready for an adventure!');
+        function unlockContent() {
+            document.getElementById('contentLock').style.display = 'block';
         }
     </script>
 </body>
